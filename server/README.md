@@ -8,7 +8,7 @@
 
 ## How It Works ?
 
-1. Download Postman Collection [[here]()]
+1. Download Postman Collection [[here](https://drive.google.com/file/d/1eiFQKdaUJWo5KVjEfTL3zebJXcAvCCR-/view?usp=sharing)]
 2. Open Your Postman App
 3. Import Postman Collection
 4. Create Environtments in Postman & Set :
