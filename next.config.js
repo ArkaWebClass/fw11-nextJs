@@ -9,6 +9,10 @@ module.exports = {
         source: "/profile", // source = path sesudah diubah
         destination: "/main/profile", // destination = path sebelum dirubah
       },
+      // {
+      //   source: "/profile/[id]",
+      //   destination: "main/profile/[id]",
+      // },
     ];
   },
 };
