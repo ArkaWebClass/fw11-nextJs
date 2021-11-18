@@ -4,6 +4,8 @@ import axios from "utils/axios";
 import { useRouter } from "next/router";
 import Cookie from "js-cookie";
 import { getDataCookie } from "middleware/authorizationPage";
+import { connect } from "react-redux";
+import { loginUser } from "stores/action/auth";
 
 export async function getServerSideProps(context) {
   const dataCookie = await getDataCookie(context);
@@ -18,12 +20,13 @@ export async function getServerSideProps(context) {
   return { props: {} };
 }
 
-export default function Login() {
+function Login(props) {
   const router = useRouter();
   const [form, setForm] = useState({ email: "", password: "" });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // props.loginUser(form);
     axios
       .post("/auth/login", form)
       .then((res) => {
@@ -46,6 +49,7 @@ export default function Login() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  console.log(props.auth);
   return (
     <Layout title="Login">
       <div className="container">
@@ -74,3 +78,9 @@ export default function Login() {
     </Layout>
   );
 }
+
+const mapStateToProps = (state) => {
+  return { auth: state.auth };
+};
+const mapDispatchToProps = { loginUser };
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

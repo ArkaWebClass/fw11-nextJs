@@ -30,7 +30,11 @@ export default function HandleImage() {
       <hr />
       <h1>Handle SVG</h1>
       {/* with img element HTML */}
-      <img src="../assets/arrow-up.svg" alt="icon arrow" />
+      <img
+        src="../assets/arrow-up.svg"
+        alt="icon arrow"
+        style={{ fill: "none", strokeWidth: "3px", stroke: "red" }}
+      />
       {/* with next/image */}
       <Image src={LogoArrow} alt="icon arrow" />
     </div>

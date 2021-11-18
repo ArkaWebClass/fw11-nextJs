@@ -110,21 +110,6 @@ export default function CreatePin() {
       >
         Submit
       </button>
-      <hr />
-      <h1>Handle Image</h1>
-      {/* with img element HTML */}
-      {/* <img src="../assets/device.png" alt="device" /> */}
-      {/* with next/image */}
-      <div style={imageDevice}>
-        <Image
-          src={DeviceImage}
-          alt="Picture of the author"
-          // width={500} automatically provided
-          // height={500} automatically provided
-          // blurDataURL="data:..." automatically provided
-          // placeholder="blur" // Optional blur-up while loading
-        />
-      </div>
     </div>
   );
 }
