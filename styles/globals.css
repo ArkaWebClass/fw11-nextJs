@@ -23,3 +23,44 @@ a {
   stroke-width: 3;
   stroke: #491ec4;
 }
+
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffffff;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #9f9f9f;
+}
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffba33;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #6a4029;
+}
+
+.label-radio {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #6a4029;
+}
+
+.container-radio {
+  width: 500px;
+  border: 2px solid black;
+  margin: auto;
+  padding: 20px;
+}

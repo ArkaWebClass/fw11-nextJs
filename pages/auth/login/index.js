@@ -26,37 +26,49 @@ function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // props.loginUser(form);
-    axios
-      .post("/auth/login", form)
-      .then((res) => {
-        console.log(res);
-        Cookie.set("token", res.data.data.token);
-        Cookie.set("id", res.data.data.id);
-        // if (res.data.data.pin) {
-        //   ...
-        // } else {
-        //   ...
-        // }
-        router.push("/main/home");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // INPUT
+    // console.log(form);
+    // {
+    //   email: "...",
+    //   password: "..."
+    // }
+    // PROSES
+    // menjalankan proses axios
+    // axios
+    //   .post("/auth/login", form)
+    //   .then((res) => {
+    //     // OUTPUT
+    //     console.log(res);
+    //     Cookie.set("token", res.data.data.token);
+    //     Cookie.set("id", res.data.data.id);
+    //     // if (res.data.data.pin) {
+    //     //   ...
+    //     // } else {
+    //     //   ...
+    //     // }
+    //     router.push("/main/home");
+    //   })
+    //   .catch((err) => {
+    //     // OUTPUT
+    //     console.log(err);
+    //   });
+    props.loginUser(form);
   };
 
   const handleChangeText = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    // email : "bagustri15@gmail.com"
   };
 
-  console.log(props.auth);
+  // console.log(props.auth);
   return (
     <Layout title="Login">
       <div className="container">
         <h1>Login Page</h1>
+        <button onClick={() => props.addToCart("DATA")}>Add To Cart</button>
         <hr />
         <div className="mt-2">
-          <form className="card p-5" onSubmit={handleSubmit}>
+          <form className="card p-5">
             <label className="form-label">Email</label>
             <input
               type="email"
@@ -71,7 +83,9 @@ function Login(props) {
               name="password"
               onChange={handleChangeText}
             />
-            <button className="btn btn-primary mt-3">Submit</button>
+            <button className="btn btn-primary mt-3" onClick={handleSubmit}>
+              Submit
+            </button>
           </form>
         </div>
       </div>
@@ -82,5 +96,12 @@ function Login(props) {
 const mapStateToProps = (state) => {
   return { auth: state.auth };
 };
-const mapDispatchToProps = { loginUser };
+
+// const mapDispatchToProps = { loginUser };
+
+const mapDispatchToProps = (dispatch) => ({
+  addToCart: (data) => dispatch({ type: "ADDCART", data: data }),
+  loginUser: (data) => dispatch(loginUser(data)),
+});
+
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

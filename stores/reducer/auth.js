@@ -26,6 +26,12 @@ const auth = (state = initialState, action) => {
         isError: true,
       };
     }
+    case "ADDCART": {
+      return {
+        ...state,
+        cart: `BERTAMBAH ${action.data}`,
+      };
+    }
     default: {
       return state;
     }
