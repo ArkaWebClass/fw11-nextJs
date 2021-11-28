@@ -8,13 +8,13 @@
 
 ## How It Works ?
 
-1. Download Postman Collection [[here](https://drive.google.com/file/d/1eiFQKdaUJWo5KVjEfTL3zebJXcAvCCR-/view?usp=sharing)]
+1. Download Postman Collection [[here](https://drive.google.com/file/d/1MS-JQIxvP5lmmjTz3DUIROnFo-Aid35b/view?usp=sharing)]
 2. Open Your Postman App
 3. Import Postman Collection
 4. Create Environtments in Postman & Set :
 
 ```bash
-VARIABLE : dev
+VARIABLE : local
 INITIAL VALUE : https://zwalet.herokuapp.com
 CURRENT VALUE : https://zwalet.herokuapp.com
 ```
@@ -24,7 +24,7 @@ CURRENT VALUE : https://zwalet.herokuapp.com
 ## Remote Database
 
 ```bash
-Hostname = ec2-54-236-24-175.compute-1.amazonaws.com
+Hostname = ec2-34-205-92-193.compute-1.amazonaws.com
 Port = 3306
 Username = fwbagus
 Password = Rahasia123!

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "882b8ff8-073f-48dc-a28b-12fa4818fd9b",
+		"_postman_id": "95bb69a2-450a-4e2c-9009-ed3f2bf6bfc9",
 		"name": "ZWallet Project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -23,12 +23,12 @@
 								},
 								{
 									"key": "lastName",
-									"value": "",
+									"value": "TH",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "intan@gmail.com",
+									"value": "bagustri15@gmail.com",
 									"type": "text"
 								},
 								{
@@ -39,9 +39,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/auth/register",
+							"raw": "{{local}}/auth/register",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"auth",
@@ -66,15 +66,15 @@
 								},
 								{
 									"key": "password",
-									"value": "1234",
+									"value": "123",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/auth/login",
+							"raw": "{{local}}/auth/login",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"auth",
@@ -90,9 +90,9 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/auth/logout",
+							"raw": "{{local}}/auth/logout",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"auth",
@@ -124,9 +124,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/auth/forgot-password",
+							"raw": "{{local}}/auth/forgot-password",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"auth",
@@ -146,25 +146,26 @@
 							"urlencoded": [
 								{
 									"key": "keysChangePassword",
-									"value": "018312",
+									"value": "649386",
+									"description": "diambil dari url",
 									"type": "text"
 								},
 								{
 									"key": "newPassword",
-									"value": "1234",
+									"value": "123",
 									"type": "text"
 								},
 								{
 									"key": "confirmPassword",
-									"value": "1234",
+									"value": "123",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/auth/reset-password",
+							"raw": "{{local}}/auth/reset-password",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"auth",
@@ -180,9 +181,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/auth/verify/968357",
+							"raw": "{{local}}/auth/verify/968357",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"auth",
@@ -204,9 +205,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/user?page=1&limit=2&search=&sort=",
+							"raw": "{{local}}/user?page=1&limit=50&search=bagus&sort=firstName ASC",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user"
@@ -218,16 +219,16 @@
 								},
 								{
 									"key": "limit",
-									"value": "2"
+									"value": "50"
 								},
 								{
 									"key": "search",
-									"value": "",
-									"description": "bisa search berdasarkan firstName | lastNAme | noTelp"
+									"value": "bagus",
+									"description": "bisa search berdasarkan firstName | lastName | noTelp"
 								},
 								{
 									"key": "sort",
-									"value": "",
+									"value": "firstName ASC",
 									"description": "bisa sort berdasarkan firstName ASC/DESC | noTelp ASC/DESC"
 								}
 							]
@@ -241,14 +242,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/user/profile/d41d5e77-a802-4cc2-882d-be32b6ae06d3",
+							"raw": "{{local}}/user/profile/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"profile",
-								"d41d5e77-a802-4cc2-882d-be32b6ae06d3"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -260,9 +261,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/user/pin?pin=654321",
+							"raw": "{{local}}/user/pin?pin=123456",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
@@ -271,7 +272,7 @@
 							"query": [
 								{
 									"key": "pin",
-									"value": "654321"
+									"value": "123456"
 								}
 							]
 						}
@@ -288,25 +289,25 @@
 							"urlencoded": [
 								{
 									"key": "firstName",
-									"value": "Tri",
+									"value": "Bagus",
 									"type": "text"
 								},
 								{
 									"key": "lastName",
-									"value": "Harjanto",
+									"value": "Tri Harjanto",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/user/profile/5",
+							"raw": "{{local}}/user/profile/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"profile",
-								"5"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -328,14 +329,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/user/profile/5",
+							"raw": "{{local}}/user/profile/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"profile",
-								"5"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -352,19 +353,19 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": []
+									"src": "/Users/apple/Documents/Saved Pictures/70153035_2365283250405764_5551098688879310076_n.jpg"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/user/image/5",
+							"raw": "{{local}}/user/image/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"image",
-								"5"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -380,20 +381,20 @@
 							"urlencoded": [
 								{
 									"key": "pin",
-									"value": "654321",
+									"value": "123456",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/user/pin/d41d5e77-a802-4cc2-882d-be32b6ae06d3",
+							"raw": "{{local}}/user/pin/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"pin",
-								"d41d5e77-a802-4cc2-882d-be32b6ae06d3"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -409,7 +410,7 @@
 							"urlencoded": [
 								{
 									"key": "oldPassword",
-									"value": "1234",
+									"value": "123",
 									"type": "text"
 								},
 								{
@@ -425,14 +426,14 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/user/password/5",
+							"raw": "{{local}}/user/password/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"password",
-								"5"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -444,14 +445,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/user/image/5",
+							"raw": "{{local}}/user/image/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"user",
 								"image",
-								"5"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -478,9 +479,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/transaction/top-up",
+							"raw": "{{local}}/transaction/top-up",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"transaction",
@@ -503,12 +504,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"transaction_time\": \"2021-10-28 21:35:46\",\n  \"transaction_status\": \"settlement\",\n  \"transaction_id\": \"e271cf5a-d2de-4b36-99c7-962870f46a4a\",\n  \"status_message\": \"midtrans payment notification\",\n  \"status_code\": \"200\",\n  \"signature_key\": \"2c11da103ea32f4873b10a2279e00b5a2c1d3eaf474d6047cc8f5489b97e953960ef64cca57c29a1f7b8b1139e4665bfde0d48719a167e037321176baf66a8ff\",\n  \"settlement_time\": \"2021-10-28 21:35:49\",\n  \"payment_type\": \"bca_klikpay\",\n  \"order_id\": \"0a4e390f-cd22-46fc-890c-3aa3ca15235f\",\n  \"merchant_id\": \"G042642950\",\n  \"gross_amount\": \"50000.00\",\n  \"fraud_status\": \"accept\",\n  \"currency\": \"IDR\",\n  \"approval_code\": \"112233\"\n}"
+							"raw": "{\n  \"transaction_time\": \"2021-11-15 21:36:19\",\n  \"transaction_status\": \"settlement\",\n  \"transaction_id\": \"a2c15c80-a3bc-4b8f-86a6-b0f68836c2b6\",\n  \"status_message\": \"midtrans payment notification\",\n  \"status_code\": \"200\",\n  \"signature_key\": \"1582e7a95bcc7ad7f8cffdf9ec6f8231df681e9345aad354998ab0ff828b0c787b5b2787e4f391fbaaf27d597d274412bae98a2ba1c96419c068bbf907a3349c\",\n  \"settlement_time\": \"2021-11-15 21:36:24\",\n  \"payment_type\": \"bca_klikpay\",\n  \"order_id\": \"561a6847-1b98-4534-9830-0308590b2930\",\n  \"merchant_id\": \"G042642950\",\n  \"gross_amount\": \"20000.00\",\n  \"fraud_status\": \"accept\",\n  \"currency\": \"IDR\",\n  \"approval_code\": \"112233\"\n}"
 						},
 						"url": {
-							"raw": "{{dev}}/transaction/midtrans-notification",
+							"raw": "{{local}}/transaction/midtrans-notification",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"transaction",
@@ -533,12 +534,12 @@
 							"urlencoded": [
 								{
 									"key": "receiverId",
-									"value": "42000b5a-776f-4279-b864-c00cd0f3864a",
+									"value": "452572a1-f508-4ca7-9e2d-c71278fbcf29",
 									"type": "text"
 								},
 								{
 									"key": "amount",
-									"value": "30000",
+									"value": "10000",
 									"type": "text"
 								},
 								{
@@ -549,9 +550,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev}}/transaction/transfer",
+							"raw": "{{local}}/transaction/transfer",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"transaction",
@@ -572,13 +573,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/dashboard/d41d5e77-a802-4cc2-882d-be32b6ae06d3",
+							"raw": "{{local}}/dashboard/494bde13-604a-40f7-b380-383adf852451",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"dashboard",
-								"d41d5e77-a802-4cc2-882d-be32b6ae06d3"
+								"494bde13-604a-40f7-b380-383adf852451"
 							]
 						}
 					},
@@ -595,9 +596,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/transaction/history?page=2&limit=2&filter=MONTH",
+							"raw": "{{local}}/transaction/history?page=1&limit=2&filter=WEEK",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"transaction",
@@ -606,7 +607,7 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "2"
+									"value": "1"
 								},
 								{
 									"key": "limit",
@@ -614,9 +615,28 @@
 								},
 								{
 									"key": "filter",
-									"value": "MONTH",
+									"value": "WEEK",
 									"description": "WEEK | MONTH | YEAR"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Transaction By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/transaction/history/ca614bf1-a18b-45d7-abc6-c4b224e9e242",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"transaction",
+								"history",
+								"ca614bf1-a18b-45d7-abc6-c4b224e9e242"
 							]
 						}
 					},
@@ -633,14 +653,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev}}/export/transaction/00c840b2-b516-4798-b448-6dcdbee0c4e4",
+							"raw": "{{local}}/export/transaction/9caa3b79-73af-482d-85a8-187aa5cc577b",
 							"host": [
-								"{{dev}}"
+								"{{local}}"
 							],
 							"path": [
 								"export",
 								"transaction",
-								"00c840b2-b516-4798-b448-6dcdbee0c4e4"
+								"9caa3b79-73af-482d-85a8-187aa5cc577b"
 							]
 						}
 					},
@@ -654,7 +674,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ0MWQ1ZTc3LWE4MDItNGNjMi04ODJkLWJlMzJiNmFlMDZkMyIsImZpcnN0TmFtZSI6IkJhZ3VzIiwibGFzdE5hbWUiOiIiLCJub1RlbHAiOm51bGwsImltYWdlIjpudWxsLCJiYWxhbmNlIjo2MDAwMCwiZW1haWwiOiJiYWd1c3RyaTE1QGdtYWlsLmNvbSIsInBpbiI6IiQyYiQxMCRMTWhnRjQ4bkZxcHBTL1dSdEd3Y0IuT3hLbjB0L2hNNDdqZkFQRVdoaVczSnptM3lvU1dXaSIsInN0YXR1cyI6MSwiY3JlYXRlZEF0IjoiMjAyMS0xMC0yN1QwNzozMjo0Ni4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMS0xMC0yOFQwODowNToxOC4wMDBaIiwiaWF0IjoxNjM2Njc1MjUwLCJleHAiOjE2MzY3NjE2NTB9.h46NdZnes1CKe8sJmMRssZvkV8pR5RRR6SpoImpPRVo",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQ5NGJkZTEzLTYwNGEtNDBmNy1iMzgwLTM4M2FkZjg1MjQ1MSIsImZpcnN0TmFtZSI6IkJhZ3VzIiwibGFzdE5hbWUiOiJUSCIsIm5vVGVscCI6bnVsbCwiaW1hZ2UiOm51bGwsImJhbGFuY2UiOjAsImVtYWlsIjoiYmFndXN0cmkxNUBnbWFpbC5jb20iLCJwaW4iOm51bGwsInN0YXR1cyI6MSwiY3JlYXRlZEF0IjoiMjAyMS0xMS0yOFQwMDoxNTowNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMS0xMS0yOFQwMDoxNzo0MS4wMDBaIiwiaWF0IjoxNjM4MDU4Njc2LCJleHAiOjE2MzgxNDUwNzZ9.AtUucJPErQAx6plkw50Zx-akm7630ndytadRIhylI6A",
 				"type": "string"
 			}
 		]
