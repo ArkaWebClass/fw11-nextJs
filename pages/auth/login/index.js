@@ -34,25 +34,25 @@ function Login(props) {
     // }
     // PROSES
     // menjalankan proses axios
-    // axios
-    //   .post("/auth/login", form)
-    //   .then((res) => {
-    //     // OUTPUT
-    //     console.log(res);
-    //     Cookie.set("token", res.data.data.token);
-    //     Cookie.set("id", res.data.data.id);
-    //     // if (res.data.data.pin) {
-    //     //   ...
-    //     // } else {
-    //     //   ...
-    //     // }
-    //     router.push("/main/home");
-    //   })
-    //   .catch((err) => {
-    //     // OUTPUT
-    //     console.log(err);
-    //   });
-    props.loginUser(form);
+    axios
+      .post("/auth/login", form)
+      .then((res) => {
+        // OUTPUT
+        console.log(res);
+        Cookie.set("token", res.data.data.token);
+        Cookie.set("id", res.data.data.id);
+        // if (res.data.data.pin) {
+        //   ...
+        // } else {
+        //   ...
+        // }
+        router.push("/main/home");
+      })
+      .catch((err) => {
+        // OUTPUT
+        console.log(err);
+      });
+    // props.loginUser(form);
   };
 
   const handleChangeText = (e) => {

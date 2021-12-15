@@ -3,6 +3,7 @@ import Navbar from "components/module/Navbar";
 import Layout from "components/Layout";
 import axios from "utils/axios";
 import { getDataCookie } from "middleware/authorizationPage";
+import { initializeStore } from "stores";
 
 // Server Side Rendering
 export async function getServerSideProps(context) {
@@ -15,6 +16,9 @@ export async function getServerSideProps(context) {
       },
     };
   }
+
+  const reduxStore = initializeStore();
+  console.log(reduxStore.getState());
 
   const response = await axios
     .get("/user?page=1&limit=2&search=&sort=", {
