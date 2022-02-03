@@ -21,13 +21,20 @@ CURRENT VALUE : https://zwalet.herokuapp.com
 
 5. Test Request
 
+## What To Do ?
+
+1. Register using your real information
+2. Open your registered email address
+3. Open email and follow the instruction to verify your Zwallet account
+4. Login and use the API
+
 ## Remote Database
 
 ```bash
 Hostname = ec2-34-205-92-193.compute-1.amazonaws.com
 Port = 3306
-Username = fwbagus
-Password = Rahasia123!
+Username = talent
+Password = Talent123!
 ```
 
 note: don't drop or remove table and database
